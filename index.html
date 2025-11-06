@@ -5,44 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Empathy is punk</title>
     <style>
-        * { margin: 0; box-sizing: border-box; }
-        body { font-family: sans-serif; }
-        img { max-width: 100%; }
+		@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+		html { font-family: "Public Sans", sans-serif; }
 
-        section {
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        section figure { flex: 1 1 100%; }
-        section .content { flex: 0 1 auto; }
+		* { margin: 0; }
+		.row { display: flex; gap: 1rem; } .row > * { flex: 1; }
+		img { max-width: 100%; }
 
-        figure { display: flex; } /* WTF why this worky!?? */
-        section figure img {
-            display: block;
-            width: 100%;
-            min-height: 100%;
-            object-fit: cover;
-            object-position: left top;
-        }
+		section {
+		    height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+  
+		section figure { flex: 1 1  100%; overflow: hidden; }
+		section .content { flex: 1 0 min-content; }
 
-        /* colonnes */
-        .row { display: flex; gap: 1rem; }
-        .row > * { flex: 1; }
+		section figure img { 
+			width: 100%; height: 100%; 
+			object-fit: cover; 
+			object-position: left top; 
+		}
+		.content { padding: 1rem; }
 
-
-        .content { padding: 1rem; }
+		/* section figure {  outline: 2px solid #F0F;  outline-offset: -3px;}
+		section .content { outline: 2px solid #0CF; outline-offset: -3px;} */
 
 
-       /* scroll */
-       html, body { scroll-snap-type: y mandatory; }
-       section { scroll-snap-align: start; }
+		html, body {
+			scroll-snap-type: y mandatory;
+		}
+		section { 
+			scroll-snap-align: start; 
+		}
 
 
         /* section { outline: 2px solid magenta; outline-offset: -2px; }
         figure { outline: 2px solid cyan; outline-offset: -5px; }
-        .content { outline: 2px solid orange; outline-offset: -5px; } */
+        .content { outline: 2px solid orange; outline-offset: -5px; }
+        img { outline: 2px solid yellow; outline-offset: -12px; } */
    
    </style>
 </head>
@@ -64,9 +66,9 @@
             <img src="Minor-threat-malcolm-riviera.jpg" alt="">
         </figure>
         <div class="content row">
-            <h3>Minor Threat</h3>
-            <p>Minor Threat was an American hardcore punk band, formed in 1980 in Washington, D.C., by vocalist Ian MacKaye and drummer Jeff Nelson. </p>
-            <p>The band was relatively short-lived, disbanding after only three years together, but had a strong influence in the emerging American hardcore punk scene, both stylistically and in helping to further establish the "do it yourself" ethic for music distribution and concert promotion.</p>
+            <div><h3>Minor Threat</h3></div>
+            <div><p>Minor Threat was an American hardcore punk band, formed in 1980 in Washington, D.C., by vocalist Ian MacKaye and drummer Jeff Nelson. </p></div>
+            <div><p>The band was relatively short-lived, disbanding after only three years together, but had a strong influence in the emerging American hardcore punk scene, both stylistically and in helping to further establish the "do it yourself" ethic for music distribution and concert promotion.</p></div> 
         </div>
     </section>
 
