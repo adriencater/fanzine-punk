@@ -9,11 +9,15 @@
 		html { font-family: "Public Sans", sans-serif; }
 
 		* { margin: 0; box-sizing: border-box;}
-		.row { display: flex; gap: 1rem; } .row > * { flex: 1; }
-		img { max-width: 100%; }
+		img { max-width: 100%; display: block; }
 
+		.row { display: flex; gap: 1rem; } .row > * { flex: 1; }
+		section { padding: 1rem; }
+		.content { padding: 1rem 0;}
+
+		/* panels layout */
 		section {
-			max-height: 100vh;
+			height: 100vh;
 			height: 100vh;
 			display: flex;
 			flex-direction: column;
@@ -26,18 +30,23 @@
 		section .content { flex: 0 1 auto; }
 
 		section figure {
-			overflow: hidden;
+			position: relative;
 		}
 		section figure img { 
-			/* width: 100%; height: 100%;  */
+			position: absolute;
 			width: 100%;
 			height: 100%;
-			object-fit: cover; 
+			/* object-fit: contain; */
+			object-fit: cover;
+		}
+		section figure .image { 
+			padding: 1rem;
+			width: 100%;
+			height: 100%;
 		}
 
-		section, .content { padding: 1rem; }
 
-
+		/* scrolling */
 		html, body {
 			scroll-snap-type: y mandatory;
 		}
@@ -45,12 +54,12 @@
 			scroll-snap-align: start; 
 		}
 
-
+/* 
 		section { outline: 2px solid blue; outline-offset: -3px; }
-		figure { outline: 2px solid cyan; outline-offset: -3px; }
-		.content { outline: 2px solid orange; outline-offset: -3px; }
-		img { outline: 2px solid magenta; outline-offset: -6px; }
-
+		section figure { outline: 2px solid cyan; outline-offset: -3px; }
+		section figure img { outline: 2px solid magenta; outline-offset: -5px; }
+		section .content { outline: 2px solid orange; outline-offset: -3px; }
+ */
 	</style>
 </head>
 <body>
@@ -65,7 +74,6 @@
 			<p>In 1964, the three young Hackney brothers watched the Beatles’ first appearance on The Ed Sullivan Show. The following day, David found a discarded guitar in an alley and used it to start learning to play.</p>
 		</div>
 	</section>
-
 
 	<section>
 		<figure>
@@ -101,6 +109,7 @@
 			<p>The band was relatively short-lived, disbanding after only three years together, but had a strong influence in the emerging American hardcore punk scene, both stylistically and in helping to further establish the “do it yourself” ethic for music distribution and concert promotion.</p>
 		</div>
 	</section>
+
 
 
 </body>
