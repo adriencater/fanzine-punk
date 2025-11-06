@@ -1,36 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empathy is punk</title>
-    <style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Empathy is punk</title>
+	<style>
 		@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 		html { font-family: "Public Sans", sans-serif; }
 
-		* { margin: 0; }
+		* { margin: 0; box-sizing: border-box;}
 		.row { display: flex; gap: 1rem; } .row > * { flex: 1; }
 		img { max-width: 100%; }
 
 		section {
-		    height: 100vh;
+			max-height: 100vh;
+			height: 100vh;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-		}
-  
-		section figure { flex: 1 1  100%; overflow: hidden; }
-		section .content { flex: 1 0 min-content; }
 
+			/* container-type: size; */
+		}
+
+		section figure { flex: 1 0 auto; }
+		section .content { flex: 0 1 auto; }
+
+		section figure {
+			overflow: hidden;
+		}
 		section figure img { 
-			width: 100%; height: 100%; 
+			/* width: 100%; height: 100%;  */
+			width: 100%;
+			height: 100%;
 			object-fit: cover; 
-			object-position: left top; 
 		}
-		.content { padding: 1rem; }
 
-		/* section figure {  outline: 2px solid #F0F;  outline-offset: -3px;}
-		section .content { outline: 2px solid #0CF; outline-offset: -3px;} */
+		section, .content { padding: 1rem; }
 
 
 		html, body {
@@ -41,47 +46,62 @@
 		}
 
 
-        /* section { outline: 2px solid magenta; outline-offset: -2px; }
-        figure { outline: 2px solid cyan; outline-offset: -5px; }
-        .content { outline: 2px solid orange; outline-offset: -5px; }
-        img { outline: 2px solid yellow; outline-offset: -12px; } */
-   
-   </style>
+		section { outline: 2px solid blue; outline-offset: -3px; }
+		figure { outline: 2px solid cyan; outline-offset: -3px; }
+		.content { outline: 2px solid orange; outline-offset: -3px; }
+		img { outline: 2px solid magenta; outline-offset: -6px; }
+
+	</style>
 </head>
 <body>
-    
-    <section>
-        <figure>
-            <img src="Minor-threat-malcolm-riviera.jpg" alt="">
-        </figure>
-        <div class="content row">
-            <h3>Minor Threat</h3>
-            <p>Minor Threat was an American hardcore punk band, formed in 1980 in Washington, D.C., by vocalist Ian MacKaye and drummer Jeff Nelson. </p>
-            <p>The band was relatively short-lived, disbanding after only three years together, but had a strong influence in the emerging American hardcore punk scene, both stylistically and in helping to further establish the "do it yourself" ethic for music distribution and concert promotion.</p>
-        </div>
-    </section>
+	
+	<section>
+		<figure>
+			<img src="Death_protopunk_band.jpg" alt="Death" style="object-position: center top;">
+		</figure>
+		<div class="content row">
+			<h3>Death</h3>
+			<p>The trio initially started as a funk group in Detroit, Michigan, in 1971, but quickly “pushed the group in a hard-rock direction that presaged punk”.</p>
+			<p>In 1964, the three young Hackney brothers watched the Beatles’ first appearance on The Ed Sullivan Show. The following day, David found a discarded guitar in an alley and used it to start learning to play.</p>
+		</div>
+	</section>
 
-    <section>
-        <figure>
-            <img src="Minor-threat-malcolm-riviera.jpg" alt="">
-        </figure>
-        <div class="content row">
-            <div><h3>Minor Threat</h3></div>
-            <div><p>Minor Threat was an American hardcore punk band, formed in 1980 in Washington, D.C., by vocalist Ian MacKaye and drummer Jeff Nelson. </p></div>
-            <div><p>The band was relatively short-lived, disbanding after only three years together, but had a strong influence in the emerging American hardcore punk scene, both stylistically and in helping to further establish the "do it yourself" ethic for music distribution and concert promotion.</p></div> 
-        </div>
-    </section>
 
-    <section>
-        <figure>
-            <img src="Minor-threat-malcolm-riviera.jpg" alt="">
-        </figure>
-        <div class="content row">
-            <h3>Minor Threat</h3>
-            <p>Minor Threat was an American hardcore punk band, formed in 1980 in Washington, D.C., by vocalist Ian MacKaye and drummer Jeff Nelson. </p>
-            <p>The band was relatively short-lived, disbanding after only three years together, but had a strong influence in the emerging American hardcore punk scene, both stylistically and in helping to further establish the "do it yourself" ethic for music distribution and concert promotion.</p>
-        </div>
-    </section>
+	<section>
+		<figure>
+			<img src="half-japanese.jpg" alt="Half Japanese" style="object-position: left top; " >
+		</figure>
+		<div class="content row">
+			<h3>Half Japanese</h3>
+			<p>The band was formed in Jad and David Fair's bedroom in Michigan in 1975 by brothers Jad and David Fair</p>
+			<p>Half Japanese’ original instrumentation included a small drum set, vocals, and an out-of-tune, distorted guitar; they typically divide into either “love songs or monster songs.”</p>
+			<p>Half Japanese were born under the banner of musical illiteracy: all members were “forbidden” from learning to play their own instrument.</p>
+		</div>
+	</section>
+
+	<section>
+		<figure>
+			<img src="stooges.jpg" alt="The Stooges" style="object-position: left top;">
+		</figure>
+		<div class="content row">
+			<h3>The Stooges</h3>
+			<p>The Stooges were an American rock band formed in Ann Arbor, Michigan, in 1967. Initially playing a raw, primitive style of rock and roll, the band gained a reputation for their confrontational performances.</p>
+			<p>The Stooges' early musical experiments were more avant garde than punk rock, with Pop incorporating such household objects as a vacuum cleaner and a blender into an intense wall of feedback that one observer described as sounding like “an airplane was landing in the room.” Homemade instruments were also incorporated to flesh out the overall sound.</p>
+		</div>
+	</section>
+
+
+	<section>
+		<figure>
+			<img src="Minor-threat-malcolm-riviera.jpg" alt="Minor Threat"  style="object-position: left top;">
+		</figure>
+		<div class="content row">
+			<h3>Minor Threat</h3>
+			<p>Minor Threat was an American hardcore punk band, formed in 1980 in Washington, D.C.</p>
+			<p>The band was relatively short-lived, disbanding after only three years together, but had a strong influence in the emerging American hardcore punk scene, both stylistically and in helping to further establish the “do it yourself” ethic for music distribution and concert promotion.</p>
+		</div>
+	</section>
+
 
 </body>
 </html>
